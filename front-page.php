@@ -1,16 +1,16 @@
 <?php
 
 get_header(); ?>
-
+<section class="home-container"
 <?php
 if (have_posts()) :
 	while(have_posts()) : the_post(); ?>
-<div><?php the_content(); ?></div>
+<article class="wrapwrap"><?php the_content(); ?></article>
 
 	<?php
 
 endwhile; ?>
-
+</section>
  <?php
 else :
 	echo '<p>:)</p>';
