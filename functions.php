@@ -1,7 +1,7 @@
 <?php
 
 function apparenza() {
-	wp_enqueue_style('custom-fonts' , '//fonts.googleapis.com/css?family=Work+Sans&display=swap');
+	wp_enqueue_style('custom-fonts' , '//fonts.googleapis.com/css?family=Roboto&display=swap');
 	wp_enqueue_style('footfootfoot' , '//use.fontawesome.com/releases/v5.6.3/css/all.css');
 	wp_enqueue_style('style' , get_stylesheet_uri());
 }

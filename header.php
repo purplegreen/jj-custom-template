@@ -25,10 +25,29 @@
 			
 
 		<a class="undecorated" href="<?php echo home_url(); ?>">
-		<h1><a class="undecorated" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+		<h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
 		</a>
 
-				
+		<!-- NAV -->
+
+		<?php wp_nav_menu( array('theme_location' => 'primary mobile', 'menu_id' => 'mobile-nav','menu_class' => 'is-open' ) ); ?>
+			
+<div class="mobile-nav-toggle"><span class="toggle"></span></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script type="text/javascript">			
+
+jQuery(function(){
+	jQuery('.mobile-nav-toggle').click(function() {
+		jQuery('#mobile-nav.is-open').toggleClass('open');
+		jQuery('.toggle').toggleClass('active');
+		jQuery('.case').toggleClass('slide');
+		jQuery('.b1item').toggleClass('slide');
+});
+});
+
+</script>	
 
 </header>	
 <!-- /site-header -->
