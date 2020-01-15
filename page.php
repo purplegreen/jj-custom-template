@@ -12,7 +12,7 @@ get_header(); ?>
 			while (have_posts() ) : the_post(); ?>
 
 
-<?php the_title( '<h2 class="">', '</h2>' ); ?>
+<?php the_title( '<h2 class="in-title">', '</h2>' ); ?>
 
 <div class="thecontent"><?php the_content(); ?></div>
 
@@ -33,6 +33,9 @@ get_header(); ?>
 
 
 ?>
+<?php
+ 	get_footer();
 
+?>
 
 

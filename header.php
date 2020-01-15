@@ -30,7 +30,22 @@
 
 		<!-- NAV -->
 
-		<?php wp_nav_menu( array('theme_location' => 'primary mobile', 'menu_id' => 'mobile-nav','menu_class' => 'is-open' ) ); ?>
+		<nav role="navigation">
+		<?php 
+		
+			$args = [
+				'theme_location' => 'primary mobile',
+				'menu_id' => 'mobile-nav',
+				'menu_class' => 'is-open',
+				'link_before' => 'wp_get_post_categories( int $post_id, array $args = array() )', 
+				]; 
+				wp_nav_menu( $args);
+				?>
+
+		</nav>	
+
+
+		
 			
 <div class="mobile-nav-toggle"><span class="toggle"></span></div>
 
