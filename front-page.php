@@ -1,10 +1,13 @@
 <?php
 
 get_header(); ?>
-<section class="home-container"
+<section class="home-container">
 <?php
 if (have_posts()) :
 	while(have_posts()) : the_post(); ?>
+
+
+
 <article class="wrapwrap">
 <?php if( get_field('background_photo') ): ?>
     <img class="under" src="<?php the_field('background_photo'); ?>" />

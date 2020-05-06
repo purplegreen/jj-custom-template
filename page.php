@@ -14,7 +14,7 @@ get_header(); ?>
 
 <?php the_title( '<h2 class="in-title">', '</h2>' ); ?>
 
-<div class="thecontent"><?php the_content(); ?></div>
+<div class="thecontent-page"><?php the_content(); ?></div>
 
 
 

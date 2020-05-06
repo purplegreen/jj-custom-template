@@ -15,20 +15,14 @@ get_header(); ?>
 
 
     <article class="wrap-in">
+    <div class="back-photo-wrapper">
             <?php if( get_field('background_photo') ): ?>
-                <img class="under" src="<?php the_field('background_photo'); ?>" />
+                <img class="under-in" src="<?php the_field('background_photo'); ?>" />
             <?php endif; ?>
-
-            <?php if( get_field('foreground_photo') ): ?>
-                <img class="above-inside" src="<?php the_field('foreground_photo'); ?>" />
-            <?php endif; ?>
-
-            <div class="thecontent"><?php the_content(); ?></div>	
-    </article>
-
-
-
-    <article class="slideshowContainer">
+</div>
+           
+        <div class="foreground_photo">
+          <div class="slideshowContainer">
 
             <div class="mySlides a1 fade" style="background-image: url(<?php the_field('image_1')?>);"></div>
             <div class="mySlides b2 fade" style="background-image: url(<?php the_field('image_2')?>);"></div>
@@ -48,11 +42,14 @@ get_header(); ?>
             <span onclick="currentSlide(5)" class="dot"></span>
             <span onclick="currentSlide(6)" class="dot"></span>
         </div>
+        </div>
 
+    </div>
+               
+         
+
+            <div class="thecontent"><?php the_content(); ?></div>	
     </article>
-
-
-
 </section>
 </div>
  	<?php }
