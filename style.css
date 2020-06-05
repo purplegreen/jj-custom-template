@@ -437,6 +437,30 @@ em {
   font-style: italic;
 }
 
+.button-more {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 60vw;
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #d8d8d8;
+  font-size: 2rem;
+  background-color: whitesmoke;
+  border: 1px solid #dedbdb;
+  border-radius: 12px;
+}
+
+.button-more:hover {
+  color: gray;
+}
+
+button:focus {
+  outline: 0;
+}
+
 /* ---------------------------------------------Spaces */
 
 .space-around {
@@ -820,6 +844,14 @@ ul.footerfooter {
     max-height: 100%;
     height: 100%;
     width: auto;
+  }
+
+  .in-title {
+    top: 8vh;
+  }
+
+  .cat {
+    top: 16vh;
   }
 
   .slideshowContainer {

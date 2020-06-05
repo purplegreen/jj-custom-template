@@ -1,11 +1,12 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 	<head>					
-		<title>dehlix</title>
-		<meta name="description" content="Jeroen Jacobs">
-		<meta charset="<?php bloginfo('charset'); ?>" >
+		<title>Jeroen Jacobs</title>
+		<meta charset="UTF-8">
+		<meta name="description" content="Jeroen Jacobs, Berlin based visual artist and furniture designer. Künstler und Möbeldesigner">	
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="keywords" content="">
+		<meta name="keywords" content="Jeroen Jacobs, Beton, concrete, sculpture, Bildhauerei, Berlin, Kitchen, Küche, Furniture design, Interior design, Möbeldesign, Bücherregal, Book shelves">
+		<meta name="author" content="Jeroen Jacobs, Design and Development Dehlix">
 		<?php wp_head(); ?>
 	</head>
 <body <?php body_class(); ?>>
@@ -43,26 +44,8 @@
 				?>
 
 		</nav>	
-
-
 		
-			
-<div class="mobile-nav-toggle"><span class="toggle"></span></div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<script type="text/javascript">			
-
-jQuery(function(){
-	jQuery('.mobile-nav-toggle').click(function() {
-		jQuery('#mobile-nav.is-open').toggleClass('open');
-		jQuery('.toggle').toggleClass('active');
-		jQuery('.case').toggleClass('slide');
-		jQuery('.b1item').toggleClass('slide');
-});
-});
-
-</script>	
+		<div class="mobile-nav-toggle"><span class="toggle"></span></div>
 
 </header>	
 <!-- /site-header -->

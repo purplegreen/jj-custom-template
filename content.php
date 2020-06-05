@@ -1,7 +1,17 @@
 
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<div class="wrapwrap">
+<?php if( get_field('background_photo') ): ?>
+    <img class="under" src="<?php the_field('background_photo'); ?>" />
+<?php endif; ?>
+<a href="<?php the_field('link_to_page'); ?>">
 
 
-<article class="">
-<?php the_title( '<h2 class="">', '</h2>' ); ?>
-<div class="thecontent"><?php the_excerpt(); ?></div>
+
+<?php if( get_field('foreground_photo') ): ?>
+    <img class="above" src="<?php the_field('foreground_photo'); ?>" />
+<?php endif; ?>
+
+</a>
+</div>
 </article>

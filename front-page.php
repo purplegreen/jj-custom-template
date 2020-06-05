@@ -1,44 +1,24 @@
-<?php
-
-get_header(); ?>
-<section class="home-container">
-<?php
-if (have_posts()) :
-	while(have_posts()) : the_post(); ?>
-
-
-
-<article class="wrapwrap">
-<?php if( get_field('background_photo') ): ?>
-    <img class="under" src="<?php the_field('background_photo'); ?>" />
-<?php endif; ?>
-<a href="<?php the_field('link_to_page'); ?>">
-
-
-
-<?php if( get_field('foreground_photo') ): ?>
-    <img class="above" src="<?php the_field('foreground_photo'); ?>" />
-<?php endif; ?>
-
-</a>
-</article>
-
-	<?php
-
-endwhile; ?>
-</section>
- <?php
-else :
-	echo '<p>:)</p>';
-
-endif; ?>
-
-
-<?php
- 	get_footer();
-
+<?php 
+get_header();
+global $wp_query;
 ?>
-
+<div class="main-container">
+	<div class="main-grid">
+		<main
+			class="posts-list"
+			data-page="<?= get_query_var('paged') ? get_query_var('paged') : 1; ?>"
+			data-max="<?= $wp_query->max_num_pages; ?>"
+		>
+			<?php if (have_posts()) : ?>
+				<?php while (have_posts()) : the_post(); ?>
+					<?php get_template_part('content'); ?>
+				<?php endwhile; ?>
+			<?php endif; ?>
+		</main>
+		<button class="button primary large expanded load-more button-more">Load More</button>
+	</div>
+</div>
+<?php get_footer();
 
 
 
